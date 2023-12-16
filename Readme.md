@@ -4,6 +4,7 @@
 Proyek ini adalah alat sederhana untuk melakukan pemindaian subdomain menggunakan Golang dan Python. Proyek ini terdiri dari dua skrip utama:
 - `subfinder.go`: Skrip Golang untuk membaca daftar subdomain dari file `subdomains.txt` dan `domains.txt`, menggabungkannya dengan domain utama yang diinputkan oleh pengguna, dan kemudian memindai setiap subdomain.
 - `subfinder.py`: Skrip Python yang sama tapi menggunakan python untuk memproses hasil pemindaian subdomain.
+- untuk `hasil.txt`: scan dulu menggunakan https://www.ipvoid.com/domain-extractor/ lalu cantumkan hasil ke hasil.txt.
 
 ## Cara Penggunaan
 1. Pastikan Anda telah menginstal Golang dan Python di sistem Anda.
@@ -34,7 +35,7 @@ Proyek ini adalah alat sederhana untuk melakukan pemindaian subdomain menggunaka
 
 7. Tunggu hingga pemindaian selesai dan periksa hasilnya.
 
-## Instalasi Golang
+## Instalasi
 Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat mengunduh dan menginstalnya dari [situs resmi Golang](https://golang.org/dl/).
 
     ```Pada TERMUX
@@ -51,6 +52,13 @@ Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat men
 	python3 subfinder.py	
     ```
 	
+## Scanning
+
+```
+python3 status.py	
+    ```
+## perhatian
+scan dulu menggunakan https://www.ipvoid.com/domain-extractor/ lalu cantumkan hasil ke hasil.txt.
 
 ## Kontribusi
 Jika Anda menemui masalah atau memiliki ide perbaikan, jangan ragu untuk membuka "issues" atau mengajukan "pull requests".
