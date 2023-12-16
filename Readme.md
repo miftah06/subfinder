@@ -54,15 +54,17 @@ Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat men
 	
 ## Scanning
 
-````python untuk win64
+```python untuk win64
 python3 status.py	
-    ```
+    
+```
 
 ## Membuat subdomain
 
-````python untuk win64
+```python untuk win64
 python3 generator.py	
-    ```
+    
+```
 
 ## perhatian
 scan dulu menggunakan https://www.ipvoid.com/domain-extractor/ lalu cantumkan hasil ke hasil.txt.
