@@ -53,8 +53,15 @@ Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat men
     ```
 	
 ## Scanning
-    ```untuk windows gunakan python
-	python3 sstatus.py	
+
+```python untun win64
+python3 status.py	
+    ```
+
+## Membuat subdomain
+
+```python untun win64
+python3 generator.py	
     ```
 
 ## perhatian
