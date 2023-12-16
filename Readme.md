@@ -53,10 +53,10 @@ Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat men
     ```
 	
 ## Scanning
-
-```
-python3 status.py	
     ```
+	python3 sstatus.py	
+    ```
+
 ## perhatian
 scan dulu menggunakan https://www.ipvoid.com/domain-extractor/ lalu cantumkan hasil ke hasil.txt.
 
