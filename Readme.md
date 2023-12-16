@@ -22,7 +22,7 @@ Proyek ini adalah alat sederhana untuk melakukan pemindaian subdomain menggunaka
 
 5. Jalankan skrip Golang:
     ```bash
-    	apt install golang -y
+    apt install golang -y
 	go mod init subdomain_scanner
 	go mod tidy
 	go build subfinder.go
