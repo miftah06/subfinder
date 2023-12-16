@@ -6,54 +6,76 @@ import (
 	"net/http"
 	"os"
 	"sync"
-	"time"
 )
 
 func main() {
-	if len(os.Args) != 2 {
-		fmt.Println("Usage: subfinder <domain>")
+	if len(os.Args) != 3 {
+		fmt.Println("Usage: subfinder <domains_file> <subdomains_file>")
 		os.Exit(1)
 	}
 
-	domain := os.Args[1]
-	subdomains := make(chan string)
-	var wg sync.WaitGroup
+	domainsFile := os.Args[1]
+	subdomainsFile := os.Args[2]
 
-	// Read common subdomains from a file
-	file, err := os.Open("subdomains.txt")
+	// Baca domain dan subdomain dari file
+	domains, err := readLines(domainsFile)
+	if err != nil {
+		fmt.Println("Error reading domains file:", err)
+		os.Exit(1)
+	}
+
+	subdomains, err := readLines(subdomainsFile)
 	if err != nil {
 		fmt.Println("Error reading subdomains file:", err)
 		os.Exit(1)
 	}
+
+	// Inisialisasi WaitGroup untuk menunggu selesainya semua goroutine
+	var wg sync.WaitGroup
+
+	// Pemindaian subdomain
+	for _, domain := range domains {
+		for _, subdomain := range subdomains {
+			wg.Add(1)
+			go scanSubdomain(domain, subdomain, &wg)
+		}
+	}
+
+	// Tunggu selesainya semua goroutine
+	wg.Wait()
+}
+
+func scanSubdomain(domain, subdomain string, wg *sync.WaitGroup) {
+	defer wg.Done()
+
+	// Bentuk URL dengan subdomain
+	url := fmt.Sprintf("http://%s.%s", subdomain, domain)
+
+	// Coba kirim permintaan HTTP ke subdomain
+	resp, err := http.Get(url)
+	if err != nil {
+		// Gagal terhubung, subdomain mungkin tidak ada
+		return
+	}
+	defer resp.Body.Close()
+
+	// Periksa status kode untuk menentukan apakah subdomain ada
+	if resp.StatusCode != http.StatusNotFound {
+		fmt.Printf("Subdomain found: %s\n", url)
+	}
+}
+
+func readLines(filename string) ([]string, error) {
+	file, err := os.Open(filename)
+	if err != nil {
+		return nil, err
+	}
 	defer file.Close()
 
+	var lines []string
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		wg.Add(1)
-		go checkSubdomain(domain, scanner.Text(), subdomains, &wg)
+		lines = append(lines, scanner.Text())
 	}
-
-	go func() {
-		wg.Wait()
-		close(subdomains)
-	}()
-
-	for subdomain := range subdomains {
-		fmt.Println(subdomain)
-	}
+	return lines, scanner.Err()
 }
-
-func checkSubdomain(domain, subdomain string, subdomains chan string, wg *sync.WaitGroup) {
-	defer wg.Done()
-	url := fmt.Sprintf("http://%s.%s", subdomain, domain)
-	client := http.Client{
-		Timeout: 2 * time.Second,
-	}
-	resp, err := client.Get(url)
-	if err == nil && resp.StatusCode < 400 {
-		subdomains <- subdomain
-	}
-
-	// You can add additional checks or validation here if needed
-}
-
