@@ -30,7 +30,7 @@ def bulk_dns_info(file_path, output_file="scan_result.txt"):
 
     with open(output_file, 'w') as output:
         for url in urls:
-            hostname = url.replace("http://", "").split("/")[0]
+            hostname = url.replace("https://", "").split("/")[0]
             cname_values, ipv4_addresses, ipv6_addresses = get_dns_info(hostname)
 
             result_line = f"{url}: CNAME {cname_values}, IPv4 {ipv4_addresses}, IPv6 {ipv6_addresses}\n"
