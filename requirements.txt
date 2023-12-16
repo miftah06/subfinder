@@ -1,0 +1,5 @@
+requests
+beautifulsoup4
+dnspython
+sniffio==1.2.0
+urllib3
