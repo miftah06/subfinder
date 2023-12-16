@@ -2,8 +2,8 @@
 
 ## Deskripsi
 Proyek ini adalah alat sederhana untuk melakukan pemindaian subdomain menggunakan Golang dan Python. Proyek ini terdiri dari dua skrip utama:
-- `main.go`: Skrip Golang untuk membaca daftar subdomain dari file `subdomains.txt` dan `list.txt`, menggabungkannya dengan domain utama yang diinputkan oleh pengguna, dan kemudian memindai setiap subdomain.
-- `process_results.py`: Skrip Python yang digunakan oleh Golang untuk memproses hasil pemindaian subdomain.
+- `subfinder.go`: Skrip Golang untuk membaca daftar subdomain dari file `subdomains.txt` dan `domains.txt`, menggabungkannya dengan domain utama yang diinputkan oleh pengguna, dan kemudian memindai setiap subdomain.
+- `subfinder.py`: Skrip Python yang sama tapi menggunakan python untuk memproses hasil pemindaian subdomain.
 
 ## Cara Penggunaan
 1. Pastikan Anda telah menginstal Golang dan Python di sistem Anda.
