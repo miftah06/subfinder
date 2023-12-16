@@ -54,13 +54,13 @@ Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat men
 	
 ## Scanning
 
-```python untun win64
+````python untuk win64
 python3 status.py	
     ```
 
 ## Membuat subdomain
 
-```python untun win64
+````python untuk win64
 python3 generator.py	
     ```
 
