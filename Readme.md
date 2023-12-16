@@ -53,7 +53,7 @@ Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat men
     ```
 	
 ## Scanning
-    ```bash
+    ```untuk windows gunakan python
 	python3 sstatus.py	
     ```
 
