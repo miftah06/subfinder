@@ -66,8 +66,8 @@ python3 generator.py
     
 ```
 
-## perhatian
-scan dulu menggunakan https://www.ipvoid.com/domain-extractor/ lalu cantumkan hasil ke hasil.txt.
+## perhatian buat scan!
+untuk scanning scan dulu menggunakan https://www.ipvoid.com/domain-extractor/ lalu cantumkan hasil ke hasil.txt.
 
 ## Kontribusi
 Jika Anda menemui masalah atau memiliki ide perbaikan, jangan ragu untuk membuka "issues" atau mengajukan "pull requests".
