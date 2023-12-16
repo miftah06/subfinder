@@ -5,24 +5,23 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strings"
 	"sync"
 	"time"
 )
 
 func main() {
-	if len(os.Args) != 3 {
-		fmt.Println("Usage: subdomain_finder <domain> <subdomains_file>")
+	if len(os.Args) != 2 {
+		fmt.Println("Usage: subdomain_finder <domain>")
 		os.Exit(1)
 	}
 
 	domain := os.Args[1]
-	subdomainsFile := os.Args[2]
-
 	subdomains := make(chan string)
 	var wg sync.WaitGroup
 
-	// Read subdomains from the file
-	file, err := os.Open(subdomainsFile)
+	// Read common subdomains from a file
+	file, err := os.Open("subdomains.txt")
 	if err != nil {
 		fmt.Println("Error reading subdomains file:", err)
 		os.Exit(1)
@@ -58,3 +57,4 @@ func checkSubdomain(domain, subdomain string, subdomains chan string, wg *sync.W
 
 	// You can add additional checks or validation here if needed
 }
+
