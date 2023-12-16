@@ -8,7 +8,7 @@ def scan_subdomain(domain):
         subdomains = subdomain_file.read().splitlines()
 
     for subdomain in subdomains:
-        url = f"http://{subdomain}.{domain}"
+        url = f"https://{subdomain}.{domain}"
         result = f"{subdomain}.{domain}"
         try:
             response = requests.get(url)
