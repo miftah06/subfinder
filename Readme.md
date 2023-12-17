@@ -11,6 +11,18 @@ Proyek ini adalah alat sederhana untuk melakukan pemindaian subdomain menggunaka
 7. Tunggu hingga pemindaian selesai dan periksa hasilnya.
 
 ## Instalasi
+1. Pastikan Anda telah menginstal Golang dan Python di sistem Anda.
+
+2. Clone repositori ini:
+    ```bash
+    git clone https://github.com/miftah06/subfinder.git
+    ```
+
+3. Ganti direktori ke proyek ini:
+    ```bash
+    cd subfinder
+    ```
+
 Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat mengunduh dan menginstalnya dari [situs resmi Golang](https://golang.org/dl/).
 
     ```Pada TERMUX
@@ -27,21 +39,9 @@ Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat men
     ```
 
 ## Cara Penggunaan KHUSUS PC
-1. Pastikan Anda telah menginstal Golang dan Python di sistem Anda.
+1. Ubah file `subdomains.txt` dan `domains.txt` sesuai kebutuhan Anda.
 
-2. Clone repositori ini:
-    ```bash
-    git clone https://github.com/miftah06/subfinder.git
-    ```
-
-3. Ganti direktori ke proyek ini:
-    ```bash
-    cd subfinder
-    ```
-
-4. Ubah file `subdomains.txt` dan `domains.txt` sesuai kebutuhan Anda.
-
-5. Jalankan skrip Golang:
+2. Jalankan skrip Golang:
     ```bash
     apt install golang -y
 	go mod init subdomain_scanner
