@@ -39,7 +39,7 @@ Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat men
     cd subfinder
     ```
 
-4. Ubah file `subdomains.txt` dan `list.txt` sesuai kebutuhan Anda.
+4. Ubah file `subdomains.txt` dan `domains.txt` sesuai kebutuhan Anda.
 
 5. Jalankan skrip Golang:
     ```bash
