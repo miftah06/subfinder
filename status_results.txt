@@ -1,0 +1,2 @@
+https://www.t-mobile.pl: 200
+https://m.t-mobile.pl: 200
