@@ -1,2 +1,8 @@
 https://www.t-mobile.pl: 200
 https://m.t-mobile.pl: 200
+https://autodiscover.t-mobile.pl: 200
+https://login.t-mobile.pl: 200
+https://www2.t-mobile.pl: 200
+https://download.t-mobile.pl: 200
+https://apps.t-mobile.pl: 200
+https://developer.t-mobile.pl: 200

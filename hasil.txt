@@ -1,2 +1,8 @@
 www.t-mobile.pl
 m.t-mobile.pl
+autodiscover.t-mobile.pl
+login.t-mobile.pl
+www2.t-mobile.pl
+download.t-mobile.pl
+apps.t-mobile.pl
+developer.t-mobile.pl

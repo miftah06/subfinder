@@ -1,2 +1,8 @@
 www.t-mobile.pl: CNAME [], IPv4 ['118.98.44.100', '178.182.200.83'], IPv6 ['118.98.44.100']
 m.t-mobile.pl: CNAME ['m.t-mobile.pl\tcanonical name = download.t-mobile.pl'], IPv4 ['118.98.44.100', '178.182.200.84'], IPv6 ['118.98.44.100']
+autodiscover.t-mobile.pl: CNAME [], IPv4 ['118.98.44.100', '178.182.201.132'], IPv6 ['118.98.44.100']
+login.t-mobile.pl: CNAME [], IPv4 ['118.98.44.100', '178.182.201.170'], IPv6 ['118.98.44.100']
+www2.t-mobile.pl: CNAME ['www2.t-mobile.pl\tcanonical name = download.t-mobile.pl'], IPv4 ['118.98.44.100'], IPv6 ['118.98.44.100']
+download.t-mobile.pl: CNAME [], IPv4 ['118.98.44.100', '178.182.200.84'], IPv6 ['118.98.44.100']
+apps.t-mobile.pl: CNAME ['apps.t-mobile.pl\tcanonical name = download.t-mobile.pl'], IPv4 ['118.98.44.100', '178.182.200.84'], IPv6 ['118.98.44.100']
+developer.t-mobile.pl: CNAME ['developer.t-mobile.pl\tcanonical name = sms.t-mobile.pl'], IPv4 ['118.98.44.100', '178.182.200.84'], IPv6 ['118.98.44.100']

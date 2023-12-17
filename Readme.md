@@ -6,7 +6,27 @@ Proyek ini adalah alat sederhana untuk melakukan pemindaian subdomain menggunaka
 - `subfinder.py`: Skrip Python yang sama tapi menggunakan python untuk memproses hasil pemindaian subdomain.
 - untuk `hasil.txt`: scan dulu menggunakan https://www.ipvoid.com/domain-extractor/ lalu cantumkan hasil ke hasil.txt.
 
-## Cara Penggunaan
+6. Ikuti instruksi untuk memasukkan domain utama.
+
+7. Tunggu hingga pemindaian selesai dan periksa hasilnya.
+
+## Instalasi
+Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat mengunduh dan menginstalnya dari [situs resmi Golang](https://golang.org/dl/).
+
+    ```Pada TERMUX
+	pkg install python3
+    pkg install golang
+	apt install python-requests
+	pip3 install httpx
+	pip3 install beautifulsoup4
+	pip3 install requests
+
+	atau 
+	pip3 install -r requirements.txt
+	python3 subfinder.py	
+    ```
+
+## Cara Penggunaan KHUSUS PC
 1. Pastikan Anda telah menginstal Golang dan Python di sistem Anda.
 
 2. Clone repositori ini:
@@ -29,27 +49,6 @@ Proyek ini adalah alat sederhana untuk melakukan pemindaian subdomain menggunaka
 	go build subfinder.go
 	./subfinder domains.txt subdomains.txt
     go run subfinder.go
-    ```
-
-6. Ikuti instruksi untuk memasukkan domain utama.
-
-7. Tunggu hingga pemindaian selesai dan periksa hasilnya.
-
-## Instalasi
-Pastikan Anda telah menginstal Golang di sistem Anda. Jika belum, Anda dapat mengunduh dan menginstalnya dari [situs resmi Golang](https://golang.org/dl/).
-
-    ```Pada TERMUX
-	pkg install python3
-    pkg install golang
-	apt install python-requests
-	pip3 install httpx
-	pip3 install beautifulsoup4
-	pip3 install requests
-	go run subfinder.go domains.txt subdomains.txt
-
-	atau 
-	pip3 install -r requirements.txt
-	python3 subfinder.py	
     ```
 	
 ## Scanning
