@@ -1,1 +1,12 @@
-t-mobile.pl
+vision.id
+visionplus.id
+visionplustv.id
+youtube.com
+yutube.com
+youtube.id
+youtube.co.id
+yt.id
+yttools.com
+yt2mate.com
+y2mate.id
+visiontv.id
